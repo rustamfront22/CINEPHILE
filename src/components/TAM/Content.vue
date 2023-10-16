@@ -32,6 +32,8 @@ import { ref, computed } from 'vue';
 import "swiper/scss";
 import 'swiper/scss/navigation';
 import { usePopular } from '@/store/popular'
+import { useActors } from '@/store/actors'
+const actorsStore = useActors()
 const popular = usePopular()
 import { useGetItemById } from '@/store/getItemById'
 const getItemById = useGetItemById()
@@ -40,10 +42,11 @@ const props = defineProps(["type"]);
 const modules = ref([Navigation])
 const content = computed(() => props.type == 'movie' ? popular.popularMovies : popular.popularTvs)
 let active = ref(false)
-let  media = ref(null)
+let media = ref(null)
 const getItem = async (item) => {
   active.value = true
   await getItemById.getItemById({type: props.type, id: item.id})
-  media.value = props.type == 'movie' ? getItemById.movie : getItemById.tv
+  media.value = props.type == 'movie' ? getItemById.movie : getItemById.tv 
+  await actorsStore.getActors({type: props.type, id: item.id, count: 4})
 }
 </script>
