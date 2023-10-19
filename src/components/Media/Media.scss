@@ -1,0 +1,24 @@
+.current-info{
+    height: 700px;
+    margin-top: 0;
+    position: relative;
+    &-content{
+        > img{
+          filter: blur(25px);
+        }
+    }
+    .poster{
+        width: 411px;
+        height: 562px;
+        position: absolute;
+        z-index: -1;
+        right: 246px;
+        top: 30px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+.nav{
+    position: static;
+    
+}

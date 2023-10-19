@@ -18,22 +18,21 @@
                 `${media.number_of_seasons}s ${media.number_of_episodes}e`
                 }}
           </span>
-          <Actors :actors="getActors"/>
         </p>
+        <Actors :actors="getActors" />
+        <BtnMore :type="type" :id="media.id" />
       </div>
       <img v-lazy="imgFull + media.backdrop_path" alt="" />
     </div>
   </div>
-  
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { imgFull } from "@/url";
-import { useActors } from '@/store/actors'
-const actorsStore = useActors()
-const getActors = computed(() => props.type == 'movie' ?
-actorsStore.actorsMovie : actorsStore.actorsTv)
 const props = defineProps(["active", "media", "type"]);
 const getGenres = computed(() => props.media.genres.reduce((acc, item) => acc + `, ${item.name}`, ''))
+import { useActors } from '@/store/actors'
+const actorsStore = useActors()
+const getActors = computed(() => props.type == 'movie' ? actorsStore.actorsMovie : actorsStore.actorsTv)
 </script>

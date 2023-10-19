@@ -12,10 +12,10 @@
         :breakpoints="swiperOptions.breakpoints"
     >
       <SwiperSlide class="top-slider-item" v-for="(item,idx) in top.top" :key="item.id">
-        <div class="main-upcoming-item-next top-slider-item-content">
+        <router-link :to="'movie/'+item.id" class="main-upcoming-item-next top-slider-item-content">
           <img :src="imgMini + item.poster_path" alt="" />
           <div><span>{{idx + 1}}</span></div>
-        </div>
+        </router-link>
       </SwiperSlide>
     </Swiper>
   </section>

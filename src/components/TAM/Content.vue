@@ -32,11 +32,11 @@ import { ref, computed } from 'vue';
 import "swiper/scss";
 import 'swiper/scss/navigation';
 import { usePopular } from '@/store/popular'
-import { useActors } from '@/store/actors'
-const actorsStore = useActors()
 const popular = usePopular()
 import { useGetItemById } from '@/store/getItemById'
 const getItemById = useGetItemById()
+import { useActors } from '@/store/actors'
+const actorsStore = useActors()
 popular.getPopular(props.type)
 const props = defineProps(["type"]);
 const modules = ref([Navigation])

@@ -1,11 +1,11 @@
 <template>
-    <RouterLink to="/" class="btn-more">
+    <RouterLink :to="type + '/' + id" class="btn-more">
         <img src="@/assets/images/bars.svg" alt="">Подробнее
     </RouterLink>
 </template>
 
 <script setup>
-
+const props = defineProps(['type', 'id'])
 </script>
 
 <style lang="scss" scoped>
@@ -19,6 +19,7 @@
     border-radius: 10px;
     align-items: center;
     transition: .3s;
+    width: max-content;
     &:hover{
         background: #0D7000;
     }
