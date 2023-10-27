@@ -8,7 +8,7 @@
 const props = defineProps(['type', 'id'])
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .btn-more{
     display: flex;
     padding: 10px 15px;
