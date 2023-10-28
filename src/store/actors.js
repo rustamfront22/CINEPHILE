@@ -17,7 +17,7 @@ export const useActors = defineStore({
                 if(type == 'movie') this.actorsMovie = allActors
                 else this.actorsTv = allActors
             } catch (error) {
-                console.error('Произошла ошибка при получении актёров', error);
+                console.error('Произошла ошибка при получении актеров', error);
             }
         }
     }

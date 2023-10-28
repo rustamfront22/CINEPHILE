@@ -15,14 +15,14 @@ const props = defineProps(['actors'])
 .actors{
     display: flex;
     flex-wrap: wrap;
-    max-width:500px;
+    max-width: 500px;
     width: 100%;
     gap: 15px;
     margin-top: 30px;
     &-item{
         display: flex;
-        align-items: center;
         gap: 10px;
+        align-items: center;
         border-radius: 25px;
         border: 1px solid #FFF;
         padding: 2px 15px 2px 2px;

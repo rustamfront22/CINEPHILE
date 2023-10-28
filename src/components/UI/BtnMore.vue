@@ -5,10 +5,10 @@
 </template>
 
 <script setup>
-const props = defineProps(['type', 'id'])
+    const props = defineProps(['type', 'id'])
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .btn-more{
     display: flex;
     padding: 10px 15px;
@@ -19,7 +19,7 @@ const props = defineProps(['type', 'id'])
     border-radius: 10px;
     align-items: center;
     transition: .3s;
-    width: max-content;
+    width: max-content; 
     &:hover{
         background: #0D7000;
     }

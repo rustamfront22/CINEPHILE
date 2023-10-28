@@ -4,8 +4,8 @@ import axios from "axios";
 export const useRec = defineStore({
     id: 'rec',
     state: () => ({
-        recMovie: null,
-        recTv: null,
+        recMovie: [],
+        recTv: [],
         url: `https://api.themoviedb.org/3/`,
         params: `/recommendations?api_key=${apiKey}&language=ru-RU&page=1`
     }),
@@ -14,15 +14,14 @@ export const useRec = defineStore({
             try {
                 const res = await axios.get(`${this.url}${type}/${id}${this.params}`)
                 res.data.results.forEach(item => {
-                    if( type == 'movie' ){
-                        if(this. recMovie.length < 4) this.recMovie.push(item)
-                    }
-                    else{
-                        if(this. recTv.length < 4) this.recTv.push(item)
+                    if(type == 'movie'){
+                        if(this.recMovie.length < 4) this.recMovie.push(item)
+                    }else{
+                        if(this.recTv.length < 4) this.recTv.push(item)
                     }
                 });
             } catch (error) {
-                console.error('Произошла ошибка при получении рекомендованные фильмы или сериалы', error);
+                console.error('Произошла ошибка при получении рекоммендаций', error);
             }
         }
     }

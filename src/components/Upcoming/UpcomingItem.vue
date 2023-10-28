@@ -5,7 +5,7 @@
     <div class="main-upcoming-item-content">
         <h1>{{movie.title || 'МЕНЯ ЗАБЫЛИ НАЗВАТЬ...((('}}</h1>
         <p>{{movie.overview || 'МЕНЯ ЗАБЫЛИ ОПИСАТЬ...((('}}</p>
-        <BtnMore type="movie" :id="movie.id"/>
+        <BtnMore type="movie" :id="movie.id" />
     </div>
     <div class="main-upcoming-item-next" @click="$emit('slideNext')">
         <img v-lazy="imgMini + nextSlide.backdrop_path" alt="">
