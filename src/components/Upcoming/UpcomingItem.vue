@@ -1,22 +1,22 @@
 <template>
-<Transition name="upcoming">
+<Transition name="upcoming-item" mode="out-in">
 <div class="main-upcoming-item" v-if="idx == slideView">
     <img v-lazy="imgFull + movie.backdrop_path" alt="">
     <div class="main-upcoming-item-content">
         <h1>{{movie.title || 'МЕНЯ ЗАБЫЛИ НАЗВАТЬ...((('}}</h1>
         <p>{{movie.overview || 'МЕНЯ ЗАБЫЛИ ОПИСАТЬ...((('}}</p>
-        <BtnMore type="movie" :id="movie.id" />
+        <BtnMore type="movie" :id="movie.id"/>
     </div>
     <div class="main-upcoming-item-next" @click="$emit('slideNext')">
         <img v-lazy="imgMini + nextSlide.backdrop_path" alt="">
-        <div>
+        <div class="info">
             <span>Следующий</span>
             <h2>{{nextSlide.title}}</h2>
         </div>
     </div>
     <div class="main-upcoming-item-prev" @click="$emit('slidePrev')">
         <img v-lazy="imgMini + prevSlide.backdrop_path" alt="">
-        <div>
+        <div class="info">
             <span>Предыдущий</span>
             <h2>{{prevSlide.title}}</h2>
         </div>

@@ -1,33 +1,32 @@
 .content {
     padding: 30px 15px 90px;
     h2 {
-        color: white;
+        color: #FFF;
         font-size: 18px;
         padding: 20px;
         margin-bottom: 31px;
     }
-    &-cards {
+    &-cards{
         display: flex;
         flex-wrap: wrap;
         gap: 15.3px;
-        a {
+        a{
             position: relative;
             width: 311px;
             height: 462px;
             border-radius: 10px;
-
-            img {
+            img{
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
                 border: 1px solid #000;
                 box-shadow: 0px 4px 4px 0px #000;
             }
-            h3 {
+            h3{
                 position: absolute;
                 bottom: 0;
                 padding: 10px 0;
-                fill: linear-gradient(359deg, #000 0.69%, rgba(0, 0, 0, 0.72) 37.71%, rgba(0, 0, 0, 0) 72.49%);
+                background: linear-gradient(359deg, #000 0.69%, rgba(0, 0, 0, 0.72) 37.71%, rgba(0, 0, 0, 0.00) 72.49%);
                 color: white;
                 text-align: center;
                 width: 100%;
@@ -36,6 +35,32 @@
                 font-weight: 400;
                 backdrop-filter: blur(2px);
             }
+        }
+    }
+    .pagination{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 0;
+        color: white;
+        font-size: 20px;
+        button{
+           background: #159a0333; 
+           color: white;
+           padding: 5px 15px;
+           font-size: 18px;
+           cursor: pointer;
+           transition: .3s;
+           border: none;
+           border-radius: 5px;
+           &:hover{
+            background: #149A03; 
+           }
+           &:disabled {
+             background: rgba(0, 0, 0, 0.24);
+             cursor: default;
+           }
         }
     }
 }

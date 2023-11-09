@@ -16,7 +16,7 @@ export const useGetItemById = defineStore({
                 if(type == 'movie') this.movie = res.data
                 else this.tv = res.data
             } catch (error) {
-                console.error('Произошла ошибка при получении топовых фильма или сериала', error);
+                console.error('Произошла ошибка при получении фильма или сериала', error);
             }
         }
     }

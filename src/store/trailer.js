@@ -14,10 +14,10 @@ export const useTrailer = defineStore({
             try {
                 const res = await axios.get(`${this.url}${type}/${id}${this.params}`)
                 res.data.results.forEach(el => {
-                    if(el.size == 1080){
-                        if(type == 'movie') this.movieTrailer = el.key
-                        else this.tvTrailer = el.key
-                    }
+                   if (el.size == 1080) {
+                    if (type == 'movie') this.movieTrailer = el.key
+                        else this.tvTrailer = el.key 
+                   }
                 });
             } catch (error) {
                 console.error('Произошла ошибка при получении трейлера', error);

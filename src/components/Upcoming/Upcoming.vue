@@ -1,4 +1,5 @@
 <template>
+<Transition name="upcoming" mode="out-in">
 <div class="main-upcoming" v-if="getUpcomingMovie">
     <UpcomingItem 
         v-for="(movie, idx) in useUpcoming().upcoming"
@@ -13,6 +14,7 @@
     />
 </div>
 <Loading v-else/>
+</Transition>
 </template>
 
 <script setup>

@@ -1,7 +1,7 @@
 <template>
-  <Content type="movie" />
+    <Content type="movie"/>
 </template>
 
 <script setup>
-import Content from "@/components/Content/Content.vue";
+    import Content from "@/components/Content/Content.vue";
 </script>

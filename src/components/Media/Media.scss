@@ -1,35 +1,28 @@
-.current-info {
+.current-info{
     min-height: 90vh;
     margin-top: 0;
     position: relative;
-    &-block {
-        position: relative;
-    }
-    h2 {
-        max-width: 1250px;
-    }
-    &-content {
+    &-content{
         padding-top: 102px;
-        > img {
-            filter: blur(25px);
+        > img{
+          filter: blur(25px);
         }
-        .actors {
+        .actors{
             max-width: 100% !important;
             justify-content: center;
-            &-content {
+            &-content{
                 display: flex;
                 flex-direction: column;
                 height: 100%;
                 justify-content: flex-end;
-                padding-bottom: 30px;
                 flex-grow: 1;
                 padding-bottom: 30px;
             }
         }
     }
-    .poster {
-        width: 311px;
-        height: 462px;
+    .poster{
+        width: 411px;
+        height: 562px;
         position: absolute;
         z-index: -1;
         right: 246px;
@@ -38,41 +31,42 @@
         object-fit: cover;
     }
 }
-.nav {
+.nav{
     position: static;
 }
-.media-content-list {
+
+.media-content-list{
     display: flex;
     justify-content: space-evenly;
     color: white;
     text-align: center;
-    align-items: center;
     margin: 50px auto;
-    h3 {
+    h3{
         font-size: 22px;
         margin-bottom: 15px;
     }
-    span {
-        font-family: "Montserrat";
+    p{
+        font-family: 'Montserrat';
         font-weight: 400;
         font-size: 20px;
     }
 }
-.rec {
+.rec{
     padding: 50px 15px 71px;
-    h2 {
-        color: white;
+    h2{
+        color: #FFF;
         font-size: 22px;
         margin-bottom: 31px;
     }
-    &-content {
+    &-content{
         display: flex;
         flex-wrap: wrap;
         gap: 15.3px;
-        a {
+        a{
             width: 311px;
             height: 462px;
-            img {
+            border-radius: 10px;
+            img{
                 width: 100%;
                 height: 100%;
                 border: 1px solid #000;
